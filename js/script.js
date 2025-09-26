@@ -14,15 +14,9 @@ function welcomeMessage() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const menuBtn = document.getElementById("menuBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
-
-  menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
+  document.getElementById("menu-btn").addEventListener("click", () => {
+    document.getElementById("mobile-menu").classList.toggle("hidden");
   });
-});
-
 
 document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault();
