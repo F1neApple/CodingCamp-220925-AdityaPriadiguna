@@ -14,10 +14,19 @@ function welcomeMessage() {
   }
 }
 
-  document.getElementById("menu-btn").addEventListener("click", () => {
-    document.getElementById("mobile-menu").classList.toggle("hidden");
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const menuLinks = mobileMenu.querySelectorAll("a");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
   });
 
+  menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+    });
+  });
 document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
